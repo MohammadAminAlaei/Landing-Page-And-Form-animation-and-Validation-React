@@ -1,0 +1,47 @@
+@import "index";
+
+.main__article__section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+  @include just-desktop{
+    justify-content: space-between;
+  }
+
+  &__card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem 1.2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 .06rem .3rem .05rem #c2c2c2;
+
+
+    @include just-tablet{
+      flex: 1;
+    }
+
+
+    &__figure {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__title {
+      font-size: 2rem;
+      padding: 1.6rem 0 .8rem 0;
+    }
+
+    &__text {
+      color: $secondary-text-color;
+      line-height: 2.8rem;
+      font-size: 1.4rem;
+      padding: .8rem 0;
+    }
+  }
+}

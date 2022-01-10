@@ -1,0 +1,104 @@
+@import "index";
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.4rem;
+
+  &__card {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+    background-color: #fff;
+    flex-direction: column;
+    box-shadow: 0 0.06rem 0.3rem 0.05rem #c2c2c2;
+    position: relative;
+
+    @include tablet-desktop {
+      flex-direction: row;
+    }
+
+    &__figure {
+      max-width: 400px;
+      height: 400px;
+
+      @include tablet-desktop {
+        flex: 1;
+      }
+
+      @include just-tablet {
+        height: 500px;
+      }
+    }
+
+  }
+
+  &__text {
+    padding: .8rem;
+    position: relative;
+
+    @include tablet-desktop {
+      flex: 2;
+    }
+
+    &__title {
+      font-size: 3.2rem;
+      line-height: 4.8rem;
+    }
+
+    &__sub {
+      color: $secondary-text-color;
+      line-height: 4.8rem;
+      font-size: 1.4rem;
+    }
+
+    &__para {
+      color: $secondary-text-color;
+      line-height: 2.4rem;
+      font-size: 1.4rem;
+      padding: 2.4rem 0;
+    }
+
+  }
+
+  &__card:after {
+    display: flex;
+    align-items: center;
+    font-size: 3.2rem;
+    justify-content: center;
+    content: '+';
+    color: #fff;
+    cursor: pointer;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    background-color: #f1b52d;
+    border-radius: 50%;
+    right: 24px;
+    bottom: -3rem;
+
+  }
+
+  &__pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 2.4rem;
+    justify-content: center;
+    width: 100%;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6rem;
+      height: 6rem;
+      background-color: #fff;
+      color: #dbc585;
+      font-size: 1.6rem;
+      box-shadow: 0 0.06rem 0.3rem 0.05rem #c2c2c2;
+      border-radius: .4rem;
+      padding: 1.6rem;
+    }
+  }
+
+}

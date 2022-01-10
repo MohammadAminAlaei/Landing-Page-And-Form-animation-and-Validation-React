@@ -1,0 +1,67 @@
+@import "index";
+
+.footer {
+  background-color: #000;
+
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    justify-content: space-between;
+    gap: 2.4rem;
+
+    @include just-desktop{
+      justify-content: space-between;
+    }
+
+    &__card {
+      max-width: 500px;
+
+      @include tablet-desktop{
+        flex: 1;
+      }
+
+      &__title {
+        font-size: 2.4rem;
+        color: #fff;
+        display: block;
+        position: relative;
+      }
+
+      &__title:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4.8rem;
+        background-color: $secondary-text-color;
+        height: .05rem;
+        top: 4rem;
+      }
+
+      &__text {
+        color: $secondary-text-color;
+        font-size: 1.3rem;
+        line-height: 2.4rem;
+        padding: 3.2rem 0;
+      }
+
+    }
+  }
+
+  &__section:after{
+    content: '';
+    width: 100%;
+    height: .8px;
+    background-color: #fff;
+    display: block;
+  }
+
+  &__copy {
+    font-family: Roboto-Light, serif;
+    font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+    padding: 1.6rem 0;
+    line-height: 2.4rem;
+  }
+}

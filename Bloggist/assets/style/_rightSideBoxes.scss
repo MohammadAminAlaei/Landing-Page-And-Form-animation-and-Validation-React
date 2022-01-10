@@ -1,0 +1,138 @@
+@import "index";
+
+
+.right-card {
+  display: flex;
+  flex-direction: column;
+
+  &__titles {
+    font-size: 2rem;
+    color: $secondary-text-color;
+    padding-bottom: 2.4rem;
+  }
+
+  &__boxes {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 2rem;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+    box-shadow: 0 0.06rem 0.3rem 0.05rem #c2c2c2;
+
+    @include just-tablet{
+      width: 48%;
+    }
+
+
+    &__figure {
+      width: 220px;
+      height: 90px;
+
+      @include tablet-desktop{
+        flex: 1;
+      }
+    }
+
+    &__texts {
+      display: flex;
+      flex-direction: column;
+
+      @include tablet-desktop{
+        flex: 3;
+      }
+
+      &__text {
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+      }
+
+      &__sub {
+        font-size: 1.1rem;
+        color: $secondary-text-color;
+        line-height: 1.9rem;
+      }
+    }
+
+    &__end {
+      margin-bottom: 4rem;
+    }
+
+  }
+
+
+  &__archives {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 6rem;
+
+    &__card {
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: $box-shadow;
+      font-size: 1.6rem;
+      color: $primary-text-color;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    background-color: #fff;
+    gap: .8rem;
+    margin-bottom: 6rem;
+    box-shadow: $box-shadow;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7rem;
+      height: 7rem;
+      color: #fff;
+      font-size: 3.2rem;
+      padding: 3.2rem;
+    }
+
+    &__twitter {
+      background-color: #00aaf7;
+    }
+
+    &__facebook {
+      background-color: #4166b4;
+    }
+
+    &__pinterest {
+      background-color: #c71e22;
+    }
+
+    &__linkedin {
+      background-color: #0377b8;
+    }
+  }
+
+  &__ad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px double #d4ccc5;
+    width: 300px;
+    height: 300px;
+    font-size: 1.6rem;
+    color: #d4ccc5;
+  }
+
+  &__box{
+
+    @include just-tablet{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      justify-content: space-between;
+    }
+  }
+}

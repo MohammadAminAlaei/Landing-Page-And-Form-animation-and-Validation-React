@@ -1,0 +1,87 @@
+@import "index";
+
+.back-header {
+  background-color: #fff;
+  padding-bottom: 1.2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    font-family: Pacifico, serif;
+    font-size: 3.2rem;
+  }
+
+  &__icon {
+    color: $primary-text-color;
+    display: none !important;
+
+    @include just-mobile {
+      display: block !important;
+      font-size: 2.4rem;
+      text-decoration: none;
+    }
+  }
+
+  &__navbar {
+    transition: all ease-in-out .4s;
+    z-index: 1;
+
+
+    @include just-mobile {
+      background-color: #fff;
+    }
+
+    &__times {
+      @include just-mobile{
+        display: block;
+      }
+      display: none;
+      font-size: 2.4rem;
+    }
+
+    &__ul__icon__arrow {
+      font-size: 1rem;
+      color: $primary-text-color;
+    }
+
+    ul li {
+      color: $primary-text-color;
+      font-size: 1.6rem;
+      list-style: none;
+      display: inline;
+      padding: 0 1.6rem;
+
+      a {
+        color: $primary-text-color;
+        text-decoration: none;
+        @include just-mobile{
+        display: block;
+        }
+
+        @include just-mobile {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include just-mobile {
+    &__navbar {
+      width: 0;
+      overflow: hidden;
+      transition: all ease-in-out 0.5s;
+      position: fixed;
+      top: 0;
+      right: 0;
+
+      ul li {
+        line-height: 3.6rem;
+      }
+    }
+  }
+}
+

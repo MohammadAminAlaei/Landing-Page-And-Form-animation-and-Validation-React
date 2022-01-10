@@ -1,0 +1,15 @@
+@import "index";
+@import "mainCards";
+@import "rightCards";
+
+.main-card{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3.2rem 0;
+  gap: 4rem;
+
+  @include just-desktop{
+    flex-wrap: nowrap;
+  }
+
+}
